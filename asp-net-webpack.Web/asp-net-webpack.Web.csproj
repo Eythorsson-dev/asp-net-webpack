@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Remove="bundleconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Pages\Account\Login\login.js" />
+	  <None Remove="Pages\Account\PasswordReset\passwordReset.js" />
+	  <None Remove="Pages\Account\AccountVerify\AccountVerify.js" />
+	  <None Remove="Pages\Account\Register\register.js" />
+	  <None Remove="Pages\Dashboard\dashboard.js" />
+	  <None Remove="Pages\Order\order.js" />
+	  <None Remove="postcss.config.cjs" />
+	  <None Remove="purgecss.config.js.cjs" />
+	  <None Remove="tailwind.config.cjs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Pages\Account\Login\login.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Pages\Account\PasswordReset\passwordReset.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Pages\Account\AccountVerify\accountVerify.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Pages\Account\Register\register.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Pages\Order\order.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Pages\Dashboard\dashboard.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\asp-net-webpack.Core\asp-net-webpack.Core.csproj" />
+		<ProjectReference Include="..\asp-net-webpack.Database\asp-net-webpack.Database.sqlproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="bundleconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
+	</ItemGroup>
+
+
+</Project>

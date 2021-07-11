@@ -1,0 +1,12 @@
+﻿@page "~/"
+@model asp_net_webpack.Web.Pages.DashboardModel
+@addTagHelper *, aspnetcore-vuecomponents
+@{ ViewData["Title"] = "Dashboard"; }
+
+@section Scripts {
+    <script src="~/dist/dashboard.bundle.js" asp-append-version="true"></script>
+}
+
+<div id="app">
+
+</div>
