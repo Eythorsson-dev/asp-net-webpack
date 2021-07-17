@@ -1,9 +1,10 @@
 const path = require('path');
 
+var environment = process.env.NODE_ENV || 'development';
 module.exports = {
-    watch: true,
+    mode: environment,
+    watch: environment !== 'production',
     devtool: 'source-map',
-    mode: 'development',
     resolve: {
         alias: {
             vue: 'vue/dist/vue.js',
